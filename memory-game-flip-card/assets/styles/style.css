@@ -1,0 +1,122 @@
+@keyframes animation {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background: linear-gradient(200deg, #e6e616, #d42954) no-repeat; */
+  background: linear-gradient(200deg, #e2be1c 30%, #642a0f) no-repeat;
+  background-color: #d1b518;
+  background-size: 100% 100vh;
+  font-family: "Righteous", sans-serif;
+
+  text-align: center;
+}
+
+h1 {
+  color: #1f1833;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+hr {
+  background-color: #1f1833;
+  border: none;
+  height: 2px;
+  width: 10%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.card_back,
+.card_front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.card_front {
+  transform: rotateY(180deg);
+  background-color: black;
+}
+
+.card_back {
+  /* color: white; */
+  font-size: 5em;
+  background-color: white;
+  border: 1px solid rgb(225, 226, 216);
+  box-sizing: border-box;
+  transition: color 0.5s linear;
+}
+
+.card_back:hover {
+  color: #d42954;
+}
+
+img {
+  width: 60%;
+}
+
+#gameBoard {
+  width: fit-content;
+  text-align: center;
+  display: grid;
+  grid-template: auto auto auto auto/ auto auto auto auto auto;
+  gap: 10px;
+  margin: auto;
+}
+
+#gameOver {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+button {
+  margin-top: 30px;
+  text-align: center;
+  background-color: white;
+  border: none;
+
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ff3264;
+  color: white;
+}
